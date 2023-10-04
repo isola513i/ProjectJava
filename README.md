@@ -89,3 +89,26 @@ public class Int101w08 {
 }
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Repetition {
+
+    static void demoPratice() {
+        int i = 0;
+        sum i = 0;
+    }
+    /*
+    write a utility class (final class + private contructor)
+    named MyUtil with the following methods
+    (1) static int factorial (int i) :
+        1.1 return 1 if i =0
+        1.2 reurn 1* 2 * 3 * ... * i if i > 0
+        1.3 throw IllegalArgumentExcpetion if i < 0
+    (2) static int summation(int i, int j):
+        2.1 return the summation of i + (i+1)
+        2.2 if i > j, swap the value of i and j
+        2.3 if i = j, return i 
+    (3) static int finbonacci(int i) :
+        return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21
+     */
+}
+
