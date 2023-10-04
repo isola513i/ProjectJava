@@ -1,5 +1,6 @@
 Int101w08
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class Repetition {
 
     public static void main(String[] args) {
         demoRandom();
@@ -8,6 +9,21 @@ Int101w08
         demoWhileLoop3();
         demoDoWhileLoop();
         demoForLoop();
+    /*
+    write a utility class (final class + private contructor)
+    named MyUtil with the following methods
+    (1) static int factorial (int i) :
+        1.1 return 1 if i =0
+        1.2 reurn 1* 2 * 3 * ... * i if i > 0
+        1.3 throw IllegalArgumentExcpetion if i < 0
+    (2) static int summation(int i, int j):
+        2.1 return the summation of i + (i+1)
+        2.2 if i > j, swap the value of i and j
+        2.3 if i = j, return i 
+    (3) static int finbonacci(int i) :
+        return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21
+    */
+        System.out.println("Factorial of 5 = " + MyUtil.factorial(5));
     }
 
     //Example
@@ -30,7 +46,7 @@ Int101w08
                 break;
             }
         }
-        System.out.println("sum of 1 to 10 = " + sum);
+        System.out.println("Sum of 1 to 10 = " + sum);
     }
 
     // without Continue   
@@ -43,7 +59,7 @@ Int101w08
             }
             i++;
         }
-        System.out.println("Result:" + sum);
+        System.out.println("Result = " + sum);
     }
 
     //Use Continue
@@ -58,51 +74,47 @@ Int101w08
             sum += j;
             j++;
         }
-        System.out.println("Result:" + sum);
+        System.out.println("Result = " + sum);
     }
-    
-    static void demoDoWhileLoop(){
+
+    static void demoDoWhileLoop() {
         int i = 0;
         int sum = 0;
-        do{
+        do {
             i++;
             sum += i;
-        }while (i < 100);
-        System.out.println("sum = " + sum);
+        } while (i < 100);
+        System.out.println("Sum = " + sum);
     }
-    
-    static void demoForLoop(){
+
+    static void demoForLoop() {
         int sum = 0;
-        for (int i =1; i <= 100; i++){
-            if(i % 5 == 0){
+        for (int i = 1; i <= 100; i++) {
+            if (i % 5 == 0) {
                 continue;
             }
             sum += i;
         }
-        System.out.println("Sum:" + sum);
+        System.out.println("Sum = " + sum);
     }
+
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public final class MyUtil {
 
-public class Repetition {
-
-    static void demoPratice() {
-        int i = 0;
-        sum i = 0;
+    private MyUtil() { }
+   
+    public static int factorial(int i) {
+        if (i < 0) {
+            throw new IllegalArgumentException();
+        }
+        if (i == 0) {
+            return 1;
+        }
+        int result = 1;
+        for (; i > 0; --i) {
+            result *= i;
+        }
+        return result;
     }
-    /*
-    write a utility class (final class + private contructor)
-    named MyUtil with the following methods
-    (1) static int factorial (int i) :
-        1.1 return 1 if i =0
-        1.2 reurn 1* 2 * 3 * ... * i if i > 0
-        1.3 throw IllegalArgumentExcpetion if i < 0
-    (2) static int summation(int i, int j):
-        2.1 return the summation of i + (i+1)
-        2.2 if i > j, swap the value of i and j
-        2.3 if i = j, return i 
-    (3) static int finbonacci(int i) :
-        return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21
-     */
 }
-
