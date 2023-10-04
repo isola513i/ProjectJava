@@ -21,9 +21,11 @@ public class Repetition {
         2.2 if i > j, swap the value of i and j
         2.3 if i = j, return i 
     (3) static int finbonacci(int i) :
-        return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21
+        return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21,...
     */
         System.out.println("Factorial of 5 = " + MyUtil.factorial(5));
+        System.out.println("Summation of 6 to 4 = " + MyUtil.summation(6, 4));
+        System.out.println("Fibonacci sequence of 7 = " + MyUtil.fibonacci(7));
     }
 
     //Example
@@ -102,8 +104,9 @@ public class Repetition {
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 public final class MyUtil {
 
-    private MyUtil() { }
-   
+    private MyUtil() {
+    }
+
     public static int factorial(int i) {
         if (i < 0) {
             throw new IllegalArgumentException();
@@ -117,4 +120,27 @@ public final class MyUtil {
         }
         return result;
     }
+
+    public static int summation(final int i, final int j) {
+        int sum = 0;
+        int min = i < j ? i : j;
+        int max = i < j ? j : i;
+        for (; min <= max; min++) {
+            sum += min;
+        }
+        return sum;
+    }
+
+    public static int fibonacci(int i) {
+        if (i < 0) {
+            throw new IllegalArgumentException("Fibonacci squence starts from 0");
+        }
+        if (i < 2) {
+            return i;
+        }
+        return fibonacci(i - 2) + fibonacci(i - 1);
+
+    }
+}
+
 }
