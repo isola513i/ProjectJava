@@ -1,5 +1,9 @@
 Int101w08
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package int101w08;
+
+import java.util.Random;
+
 public class Repetition {
 
     public static void main(String[] args) {
@@ -9,7 +13,8 @@ public class Repetition {
         demoWhileLoop3();
         demoDoWhileLoop();
         demoForLoop();
-    /*
+        demoStudent();
+        /*
     write a utility class (final class + private contructor)
     named MyUtil with the following methods
     (1) static int factorial (int i) :
@@ -22,10 +27,15 @@ public class Repetition {
         2.3 if i = j, return i 
     (3) static int finbonacci(int i) :
         return n(th) of the fibonacci squence: 1,1,2,3,5,8,13,21,...
-    */
+         */
         System.out.println("Factorial of 5 = " + MyUtil.factorial(5));
         System.out.println("Summation of 6 to 4 = " + MyUtil.summation(6, 4));
         System.out.println("Fibonacci sequence of 7 = " + MyUtil.fibonacci(7));
+    }
+
+    static void demoStudent() {
+        Student s = new Student(10, "Somchai", "DeeDee");
+        System.out.println("Student: " + s);
     }
 
     //Example
@@ -142,5 +152,30 @@ public final class MyUtil {
 
     }
 }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Student {
+    private int id;
+    private String firstname;
+    private String lastname;
+
+    public Student(int id, String firstname, String lastname) {
+        if(id < 0 || firstname == null || lastname == null || firstname.isBlank() || lastname.isBlank()) // blank =  "    " : whitespace
+            throw new IllegalArgumentException();
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Student{");
+        sb.append("id=").append(id);
+        sb.append(", firstname=").append(firstname);
+        sb.append(", lastname=").append(lastname);
+        sb.append('}');
+        return sb.toString();
+    }
 
 }
