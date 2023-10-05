@@ -2,8 +2,9 @@ package Session1;
 
 public class JavaExample2 {
     public static void main(String[] args) {
-        System.out.println(10+5); //int
-        System.out.println(3.14f); //float
-        System.out.println(0.55555555555); //double
+        int n = 10;
+        long nl = 10000;
+        float f = 3.14f;
+        double d = 1.55555555555;
     }
 }
