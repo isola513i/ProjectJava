@@ -11,5 +11,7 @@ public class JavaExample3 {
         System.out.println(money);
         String open = "Hello I Love You";
         System.out.println(open);
+
+        //ชนิดของข้อมูล ชื่อตัวแปร = ข้อมูลที่เก็บไว้
     }
 }
