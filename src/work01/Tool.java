@@ -10,30 +10,19 @@ public final class Tool {
         if (d1 >= d0 && d1 <= d2 || d1 <= d0 && d1 >= d2) {
             return d1;
         }
-        if (d2 >= d0 && d2 <= d1 || d2 <= d0 && d2 >= d1) {
-            return d2;
-        }
-        return 0;
+        return d2;
     }
 
     public static double compute(double d0, double d1, String operation) {
 
-        switch (operation) {
-            case "sum", "add", "plus":
-                return (d0 + d1);
-            case "difference", "subtract", "minus":
-                return (d0 - d1);
+        return switch (operation) {
+            case "sum", "add", "plus" -> (d0 + d1);
+            case "difference", "subtract", "minus" -> (d0 - d1);
 
-            case "product", "multiply", "times":
-                return (d0 * d1);
-
-            case "division", "by":
-                return (d0 / d1);
-            default:
-                throw new RuntimeException("Invalid Operation");
-        }
-
-
+            case "product", "multiply", "times" -> (d0 * d1);
+            case "division", "by" -> (d0 / d1);
+            default -> throw new RuntimeException("Invalid Operation");
+        };
     }
 
     public static int digitProduct(int value) {
