@@ -8,7 +8,7 @@ public class Int101w10 {
     public static void main(String[] args) {
         System.out.println("Median: " + median(3.0, 6.0, 4.0));
         System.out.println("Compute: " + compute(4.0, 5.0, "add"));
-        System.out.println("DigitProduct: " + digitProduct(755));
+        System.out.println("DigitProduct : " + digitProduct(755));
     }
 
     static void work01Tool() {
