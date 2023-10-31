@@ -72,6 +72,5 @@ public class Problem031 {
         return false;
     }
 
-
 }
 
